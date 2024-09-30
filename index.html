@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Information Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Job Application Form</h1>
+
+  <form>
+    <fieldset>
+      <legend>Personal Information</legend>
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]*" placeholder="Include country code (e.g., +1234567890)" required>
+      </div>
+      <div class="form-group">
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" required>
+      </div>
+    </fieldset>
+
+    <hr>
+
+    <fieldset>
+      <legend>Preferences</legend>
+      <div class="form-group">
+        <label for="favoriteColor">Favorite Color:</label>
+        <input type="color" id="favoriteColor" name="favoriteColor">
+      </div>
+      <div class="form-group">
+        <label for="preferredContact">Preferred Contact Method:</label>
+        <select id="preferredContact" name="preferredContact">
+          <option value="email">Email</option>
+          <option value="phone">Phone</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <div class="radio-group">
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10">
+      </div>
+    </fieldset>
+
+    <hr>
+
+    <fieldset>
+      <legend>CV Upload</legend>
+      <div class="form-group">
+        <label for="cvUpload">Upload CV:</label>
+        <input type="file" id="cvUpload" name="cvUpload">
+      </div>
+    </fieldset>
+
+    <hr>
+
+    <fieldset>
+      <legend>Agreement</legend>
+      <div class="form-group">
+        <label for="agreement">
+          <input type="checkbox" id="agreement" name="agreement" required>
+          I agree to the terms and conditions.
+        </label>
+      </div>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+</body>
+</html>
+
